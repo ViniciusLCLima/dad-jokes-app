@@ -1,0 +1,101 @@
+.Joke{
+    background-color: #fff;
+    display:flex;
+    border-style:solid;
+    border-width:0px 0px 1px 0px;
+    border-color: #F6F6F6;
+    align-items: center;
+}
+
+.Joke-joke{
+    flex-grow: 1;
+}
+
+.Joke-faceDiv{
+    justify-self:end;
+    margin: 0px 5px
+}
+
+.Joke-faceDiv>img{
+    width:50px;
+    box-shadow: 0px 3px 7px 0px rgba(0 0 0 / 40%);
+    border-radius: 50%;
+    transition: 0.5s;
+    overflow: visible;
+    background-color: transparent
+}
+
+.Joke-faceDiv>img:hover{
+    animation: shake 1s;
+}
+
+.Joke-votesDiv{
+    display: flex;
+    padding: 0px 20px;
+}
+
+.Joke-votesDiv>p{
+    width: 2em;
+    height: 2em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 50%);
+}
+
+.Joke-votesDiv>button{
+    font-size: 1.2em;
+    color: #707070;
+}
+
+.Joke-votesDiv>button>i{
+    cursor: pointer;
+}
+
+.Joke-votesDiv>button, .Joke-votesDiv>button:active, .Joke-votesDiv>button:focus{
+    outline: none;
+    background: transparent;
+    border: 0px;
+    transition: 0.3s
+}
+
+.Joke-votesDiv>button:hover{
+    animation: vibrate 1s;
+}
+
+.Joke-votesDiv>button.down-vote:hover{
+    color: red;
+}
+
+.Joke-votesDiv>button.up-vote:hover{
+    color: green;
+}
+
+@keyframes vibrate {
+    30%{
+        translate: 0px 1px ;
+    }
+    60%{
+        translate: 0px -1px;
+    }
+    80%{
+        translate: 0px 1px;
+    }
+    100% {
+        translate: 0px 0px;
+    }    
+}
+
+@keyframes shake{
+    30%{
+        rotate:35deg
+    }
+    60%{
+        rotate:-35deg
+    }
+    80%{
+        rotate: 20deg
+    }
+}
